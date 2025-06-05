@@ -21,7 +21,6 @@ app.use(cors());
 app.use(express.json());
 app.use('/static', express.static(path.resolve(__dirname, 'static')));
 
-// Заглушка
 app.get('/', (req, res) => {
     res.send('Добро пожаловать на сервер!');
 });
