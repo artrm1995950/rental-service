@@ -1,47 +1,53 @@
-import { Review } from "../../types/review";
-
-type Props = {
-  item: Review;
+export type ReviewData = {
+  id: string;
+  user: {
+    name: string;
+    avatarUrl: string;
+  };
+  rating: number;       
+  comment: string;
+  date: string;          
 };
 
-function ReviewItem({ item }: Props) {
-  const reviewDate = new Date(item.date);
-  const formattedDate = new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "long",
-  }).format(reviewDate);
+type ReviewProps = {
+  review: ReviewData;
+};
+
+export function Review({ review }: ReviewProps): JSX.Element {
+  const dateObj = new Date(review.date);
+  const formattedDate = dateObj.toLocaleString('en-US', {
+    year: 'numeric',
+    month: 'long',
+  });
+
+  const ratingPercent = `${(Math.round(review.rating) / 5) * 100}%`;
 
   return (
-    <li className="review-block">
-      <div className="review-user">
-        <div className="avatar-box">
+    <li className="reviews__item">
+      <div className="reviews__user user">
+        <div className="reviews__avatar-wrapper user__avatar-wrapper">
           <img
-            className="avatar-img"
-            src={item.user.avatarUrl}
-            width={54}
-            height={54}
-            alt="User avatar"
+            className="reviews__avatar user__avatar"
+            src={review.user.avatarUrl}
+            width="54"
+            height="54"
+            alt="Reviews avatar"
           />
         </div>
-        <div className="user-details">
-          <span className="user-name">{item.user.name}</span>
-          {item.user.isPro && <span className="user-badge">PRO</span>}
-        </div>
+        <span className="reviews__user-name">{review.user.name}</span>
       </div>
-
-      <div className="review-content">
-        <div className="rating-stars">
-          <div className="stars-filled" style={{ width: `${item.rating * 20}%` }}></div>
-          <span className="visually-hidden">Rating score</span>
+      <div className="reviews__info">
+        <div className="reviews__rating rating">
+          <div className="reviews__stars rating__stars">
+            <span style={{ width: ratingPercent }}></span>
+            <span className="visually-hidden">Rating</span>
+          </div>
         </div>
-
-        <p className="review-comment">{item.comment}</p>
-        <time className="review-date" dateTime={item.date}>
+        <p className="reviews__text">{review.comment}</p>
+        <time className="reviews__time" dateTime={review.date}>
           {formattedDate}
         </time>
       </div>
     </li>
   );
 }
-
-export { ReviewItem };
