@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { FullOffer, OffersList } from '../../types/offer';
 import { Logo } from '../../components/logo/logo';
@@ -57,13 +57,11 @@ export function OfferPage({ offers }: OfferPageProps): JSX.Element {
         <section className="offer">
           <div className="offer__gallery-container container">
             <div className="offer__gallery">
-              {offer.images.map((img, idx) => (
-  <div className="offer__image-wrapper" key={`${img}-${idx}`}>
-    <img className="offer__image" src={img} alt="Offer" />
-  </div>
-))}
-
-              
+              {offer.images.map((img) => (
+                <div className="offer__image-wrapper" key={img}>
+                  <img className="offer__image" src={img} alt="Offer" />
+                </div>
+              ))}
             </div>
           </div>
 

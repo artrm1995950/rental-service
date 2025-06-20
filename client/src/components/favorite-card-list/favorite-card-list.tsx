@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import { FavoritesByCity } from "../../types/favorite";
 import { FavoriteCard } from "../favorite-card/favorite-card";
 

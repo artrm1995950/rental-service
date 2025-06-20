@@ -49,5 +49,36 @@ export const CITIES_LOCATION : CityOffer[] = [
       longitude: 9.993682,
       zoom: 8
     }
+  },
+  {
+    name: "Cologne",
+    location: {
+      latitude: 50.93753,
+      longitude: 6.96028,
+      zoom: 8
+    }
+  },
+  {
+    name: "Lisbon",
+    location: {
+      latitude: 38.7169,
+      longitude: -9.1399,
+      zoom: 8
+    }
+  },
+  {
+    name: "Vienna",
+    location: {
+      latitude: 48.2082,
+      longitude: 16.3738,
+      zoom: 8
+    }
   }
 ]
+
+export const SortOffersType = {
+  Popular: 'Popular',
+  PriceToHigh: 'Price: low to high',
+  PriceToLow: 'Price: high to low',
+  TopRated: 'Top rated first',
+};

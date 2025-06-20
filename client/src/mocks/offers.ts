@@ -17,7 +17,7 @@ const offers: FullOffer[] = [
       "/img/penthouse-6.jpg",
     ],
     city: {
-      name: "Berlin",
+      name: "Paris",
       location: {
         latitude: 52.5200,
         longitude: 13.4050,
@@ -63,7 +63,7 @@ const offers: FullOffer[] = [
       "/img/cabin-3.jpg",
     ],
     city: {
-      name: "Zurich",
+      name: "Cologne",
       location: {
         latitude: 47.3769,
         longitude: 8.5417,
@@ -99,14 +99,16 @@ const offers: FullOffer[] = [
       "/img/tokyo-studio-1.jpg",
       "/img/tokyo-studio-2.jpg",
     ],
+    
     city: {
-      name: "Tokyo",
-      location: {
-        latitude: 35.6895,
-        longitude: 139.6917,
-        zoom: 13,
-      },
-    },
+  name: "Hamburg",
+  location: {
+    latitude: 53.551086,
+    longitude: 9.993682,
+    zoom: 13
+  }
+}
+,
     location: {
       latitude: 35.6908,
       longitude: 139.7000,
@@ -138,7 +140,7 @@ const offers: FullOffer[] = [
       "/img/beach-house-3.jpg",
     ],
     city: {
-      name: "Nice",
+      name: "Hamburg",
       location: {
         latitude: 43.7102,
         longitude: 7.2620,
@@ -198,7 +200,113 @@ const offers: FullOffer[] = [
     rating: 4.4,
     bedrooms: 1,
     maxAdults: 2,
-  }
+  },
+  {
+  id: "offer-cologne-1",
+  title: "Spacious apartment in Cologne",
+  description: "Modern apartment near the city center with a large balcony.",
+  type: "apartment",
+  price: 240,
+  images: [
+    "/img/penthouse-1.jpg",
+    "/img/penthouse-2.jpg"
+  ],
+  city: {
+    name: "Cologne",
+    location: {
+      latitude: 50.93753,
+      longitude: 6.96028,
+      zoom: 13
+    }
+  },
+  location: {
+    latitude: 50.9400,
+    longitude: 6.9650,
+    zoom: 16
+  },
+  goods: ["Wi-Fi", "Kitchen", "Washing machine"],
+  host: {
+    isPro: true,
+    name: "Lukas",
+    avatarUrl: "/img/avatar-jonas.jpg"
+  },
+  isPremium: true,
+  isFavorite: false,
+  rating: 4.7,
+  bedrooms: 2,
+  maxAdults: 3
+},
+{
+  id: "e2f4a456-78c3-4b9b-93a7-a1f2d35ee6aa",
+  title: "Cozy studio in Lisbon center",
+  description: "Small but cozy studio in the heart of Lisbon.",
+  type: "room",
+  price: 110,
+  images: [
+    "/img/beach-house-1.jpg",
+    "/img/beach-house-2.jpg"
+  ],
+  city: {
+    name: "Lisbon",
+    location: {
+      latitude: 38.7169,
+      longitude: -9.1399,
+      zoom: 13
+    }
+  },
+  location: {
+    latitude: 38.7130,
+    longitude: -9.1450,
+    zoom: 16
+  },
+  goods: ["Wi-Fi", "Air conditioning"],
+  host: {
+    isPro: false,
+    name: "Inês",
+    avatarUrl: "/img/avatar-elena.jpg"
+  },
+  isPremium: false,
+  isFavorite: true,
+  rating: 4.5,
+  bedrooms: 1,
+  maxAdults: 2
+},
+{
+  id: "f7b9cd98-4f4e-4db2-a9aa-b8b42df4a43c",
+  title: "Bright loft in Vienna",
+  description: "Sunny loft apartment near Vienna city park.",
+  type: "apartment",
+  price: 210,
+  images: [
+    "/img/prague-loft-1.jpg",
+    "/img/prague-loft-2.jpg"
+  ],
+  city: {
+    name: "Vienna",
+    location: {
+      latitude: 48.2082,
+      longitude: 16.3738,
+      zoom: 13
+    }
+  },
+  location: {
+    latitude: 48.2100,
+    longitude: 16.3755,
+    zoom: 16
+  },
+  goods: ["Wi-Fi", "Heating", "Kitchen"],
+  host: {
+    isPro: true,
+    name: "Anna",
+    avatarUrl: "/img/avatar-claire.jpg"
+  },
+  isPremium: true,
+  isFavorite: false,
+  rating: 4.6,
+  bedrooms: 2,
+  maxAdults: 4
+}
+
 ];
 
 export { offers };

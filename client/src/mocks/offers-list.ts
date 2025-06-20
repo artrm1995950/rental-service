@@ -9,7 +9,7 @@ export const offersList: OffersList[] = [
     price: 290,
     previewImage: "/img/1.jpg",
     city: {
-      name: "Barcelona",
+      name: "Paris",
       location: {
         latitude: 41.3874,
         longitude: 2.1686,
@@ -32,7 +32,7 @@ export const offersList: OffersList[] = [
     price: 120,
     previewImage: "/img/2.jpg",
     city: {
-      name: "Prague",
+      name: "Cologne",
       location: {
         latitude: 50.0755,
         longitude: 14.4378,
@@ -55,7 +55,7 @@ export const offersList: OffersList[] = [
     price: 510,
     previewImage: "/img/3.jpg",
     city: {
-      name: "Dubai",
+      name: "Amsterdam",
       location: {
         latitude: 25.2048,
         longitude: 55.2708,
@@ -78,7 +78,7 @@ export const offersList: OffersList[] = [
     price: 330,
     previewImage: "/img/4.jpg",
     city: {
-      name: "Zurich",
+      name: "Brussels",
       location: {
         latitude: 47.3769,
         longitude: 8.5417,
@@ -101,7 +101,7 @@ export const offersList: OffersList[] = [
     price: 75,
     previewImage: "/img/5.jpg",
     city: {
-      name: "Vienna",
+      name: "Hamburg",
       location: {
         latitude: 48.2082,
         longitude: 16.3738,
@@ -117,4 +117,51 @@ export const offersList: OffersList[] = [
     isPremium: true,
     rating: 4.1,
   },
+  {
+  id: "e2f4a456-78c3-4b9b-93a7-a1f2d35ee6aa",
+  title: "Cozy apartment in Lisbon center",
+  type: "apartment",
+  price: 200,
+  previewImage: "/img/6.jpg",
+  city: {
+    name: "Lisbon",
+    location: {
+      latitude: 38.7169,
+      longitude: -9.1399,
+      zoom: 13,
+    },
+  },
+  location: {
+    latitude: 38.7138,
+    longitude: -9.1425,
+    zoom: 16,
+  },
+  isFavorite: true,
+  isPremium: false,
+  rating: 4.2,
+},
+{
+  id: "f7b9cd98-4f4e-4db2-a9aa-b8b42df4a43c",
+  title: "Stylish flat near city park",
+  type: "apartment",
+  price: 180,
+  previewImage: "/img/7.jpg",
+  city: {
+    name: "Vienna",
+    location: {
+      latitude: 48.2082,
+      longitude: 16.3738,
+      zoom: 13,
+    },
+  },
+  location: {
+    latitude: 48.2060,
+    longitude: 16.3700,
+    zoom: 16,
+  },
+  isFavorite: false,
+  isPremium: true,
+  rating: 4.4,
+},
+
 ];
